@@ -1,0 +1,53 @@
+# Quality Enviro & Engineering Services – Apache configuration
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS in production (uncomment once SSL is installed)
+    # RewriteCond %{HTTPS} !=on
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Block private folders and files
+    RewriteRule ^(config|includes|middleware)(/|$) - [F,L]
+    RewriteRule (^|/)\.env - [F,L]
+    RewriteRule \.(sql|md|lock|log)$ - [F,L]
+
+    # SEO endpoints
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+    RewriteRule ^robots\.txt$ robots.php [L]
+
+    # REST API
+    RewriteRule ^api/?(.*)$ api/index.php?route=$1 [QSA,L]
+
+    # Existing files/dirs (build assets, uploads, admin) are served directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else -> SEO-aware React shell
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    # Long cache for fingerprinted build assets
+    <FilesMatch "\.(js|css|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|ico)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<FilesMatch "^(router\.php|\.env.*|composer\.(json|lock))$">
+    Require all denied
+</FilesMatch>

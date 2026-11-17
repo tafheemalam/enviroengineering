@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img">
+<defs>
+<linearGradient id="bgfire-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1a12"/><stop offset="1" stop-color="#8a2f12"/></linearGradient>
+<pattern id="gridfire-p" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/></pattern>
+<radialGradient id="glowfire-p" cx=".75" cy=".2" r=".6"><stop offset="0" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="520" fill="url(#bgfire-p)"/>
+<rect width="800" height="520" fill="url(#gridfire-p)"/>
+<rect width="800" height="520" fill="url(#glowfire-p)"/>
+<path d="M0 420 C 160 380 260 450 420 410 S 680 360 800 400 V520 H0Z" fill="#ffffff" fill-opacity=".07"/>
+<path d="M0 460 C 200 430 320 490 520 455 S 720 430 800 450 V520 H0Z" fill="#ffffff" fill-opacity=".09"/>
+<g fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(150 110) scale(1.4)"><path d="M70 0 C90 50 140 70 140 140 A70 70 0 0 1 0 140 C0 95 30 80 40 40 C55 70 60 80 70 0Z" fill="#ff8a3d" fill-opacity=".85" stroke="#ffe0b2"/><path d="M70 90 C80 115 100 125 100 150 A30 30 0 0 1 40 150 C40 130 60 120 70 90Z" fill="#ffd54f" fill-opacity=".9" stroke="none"/></g><g transform="translate(470 160)"><rect x="20" y="40" width="100" height="170" rx="14" fill="#e53935" fill-opacity=".75" stroke="#ffcdd2"/><path d="M10 40 H130" stroke-width="12" stroke="#ffcdd2"/><path d="M45 40 C45 0 95 0 95 40" fill="#e53935" fill-opacity=".75" stroke="#ffcdd2"/><circle cx="70" cy="110" r="22" stroke="#ffcdd2"/><path d="M-10 110 H20 M120 110 H150" stroke-width="14" stroke="#ffcdd2"/><path d="M0 210 H140" stroke-width="12"/></g></g>
+</svg>

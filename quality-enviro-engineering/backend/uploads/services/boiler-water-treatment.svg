@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" role="img">
+<defs>
+<linearGradient id="bgboiler" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#132b40"/><stop offset="1" stop-color="#22617a"/></linearGradient>
+<pattern id="gridboiler" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="1"/></pattern>
+<radialGradient id="glowboiler" cx=".75" cy=".2" r=".6"><stop offset="0" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="520" fill="url(#bgboiler)"/>
+<rect width="800" height="520" fill="url(#gridboiler)"/>
+<rect width="800" height="520" fill="url(#glowboiler)"/>
+<path d="M0 420 C 160 380 260 450 420 410 S 680 360 800 400 V520 H0Z" fill="#ffffff" fill-opacity=".07"/>
+<path d="M0 460 C 200 430 320 490 520 455 S 720 430 800 450 V520 H0Z" fill="#ffffff" fill-opacity=".09"/>
+<g fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(90 200)"><rect x="0" y="40" width="300" height="140" rx="70" fill="#ffffff" fill-opacity=".12"/><path d="M60 40 V0 M240 40 V0" /><path d="M40 180 V215 M260 180 V215"/><circle cx="150" cy="110" r="38"/><path d="M150 110 L172 92" stroke-width="5"/><path d="M60 -20 c10 -15 30 -15 35 -30" stroke-opacity=".6"/></g><g transform="translate(520 110) scale(1)"><path d="M60 0 C60 0 0 70 0 110 A60 60 0 0 0 120 110 C120 70 60 0 60 0Z" fill="#4fc3f7" fill-opacity=".55" stroke="#e1f5fe"/><path d="M30 115 A30 30 0 0 0 55 140" stroke="#e1f5fe" stroke-width="4"/></g><g transform="translate(640 210) scale(0.6)"><path d="M60 0 C60 0 0 70 0 110 A60 60 0 0 0 120 110 C120 70 60 0 60 0Z" fill="#4fc3f7" fill-opacity=".55" stroke="#e1f5fe"/><path d="M30 115 A30 30 0 0 0 55 140" stroke="#e1f5fe" stroke-width="4"/></g></g>
+</svg>
